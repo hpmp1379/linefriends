@@ -1,0 +1,32 @@
+/* INDEX.CSS */
+
+/* header.css */
+.hdrWrap {
+  background-color: #eee;
+  }
+  .hdrWrap header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 1200px;
+  }
+  .hdrWrap header h1.logo {
+  }
+  .hdrWrap header h1.logo a {
+  }
+  .hdrWrap header ul.gnb {
+  display: flex;
+  column-gap: 65px;
+  }
+  .hdrWrap header ul.gnb li {
+  text-transform: uppercase;
+  font-size: 12px;
+  }
+  .hdrWrap header ul.gnb li a {
+  }
+  .hdrWrap header select {
+  background-color: transparent;
+  }
+  .hdrWrap header select option {
+  }

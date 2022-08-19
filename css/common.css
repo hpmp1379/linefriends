@@ -1,1 +1,40 @@
 /* COMMON.CSS */
+
+/* basic styling*/
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto','Nanum Gothic', sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+p,li{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #000;
+}
+a{
+    font-size: inherit;
+    color: #000;
+}
+
+/* semantic */
+main{
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+header{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+section{
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* containers & wrappers */
+.content{
+    padding: 160px 0;
+}
