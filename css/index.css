@@ -1,32 +1,199 @@
 /* INDEX.CSS */
 
-/* header.css */
+/* HEADER.CSS */
 .hdrWrap {
-  background-color: #eee;
+    background-color: #eee;
+}
+.hdrWrap header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 1200px;
+}
+.hdrWrap header h1.logo {
+}
+.hdrWrap header h1.logo a {
+}
+.hdrWrap header ul.gnb {
+    display: flex;
+    column-gap: 65px;
+}
+.hdrWrap header ul.gnb li {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.hdrWrap header ul.gnb li a {
+}
+.hdrWrap header select {
+    background-color: transparent;
+}
+.hdrWrap header select option {
+}
+/* END OF HEADER.CSS */
+
+/* MAIN.CSS */
+main {
+    width: 100%;
+}
+main ul.mainGallery {
+    width: 100%;
+    height: 100vh;
+    background-color: #fc0;
+    position: relative;
+}
+main ul.mainGallery::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/main_check.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+main ul.mainGallery li {
+    width: 100%;
+    height: 100%;
+    outline: 1px solid red;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+main ul.mainGallery li:nth-of-type(1){
+    background-image:url("../img/main01.jpg");
+}
+main ul.mainGallery li:nth-of-type(2){
+    background-image:url("../img/main02.jpg");
+}
+main ul.mainGallery li:nth-of-type(3){
+    background-image:url("../img/main03.jpg");
+}
+main ul.mainGallery li:nth-of-type(4){
+    background-image:url("../img/main04.jpg");
+}
+main ul.mainGallery li:nth-of-type(5){
+    background-image:url("../img/main05.jpg");
+}
+main ul.mainGallery li:nth-of-type(6){
+    background-image:url("../img/main06.jpg");
+}
+main ul.mainGallery li:nth-of-type(7){
+    background-image:url("../img/main07.jpg");
+}
+main ul.mainGallery li:nth-of-type(8){
+    background-image:url("../img/main08.jpg");
+}
+
+main .texts {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    /*! left: 50%; */
+    top: 50%;
+}
+main .texts p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 20px;
+}
+main .texts h2 {
+}
+main .texts h2 span {
+    color: #fff;
+    font-size: 60px;
+    line-height: 80px;
+    font-weight: 800;
+}
+/* END OF MAIN.CSS */
+
+/* CNT 01.CSS */
+.cnt01 {
   }
-  .hdrWrap header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-  width: 1200px;
+  .cnt01 header {
   }
-  .hdrWrap header h1.logo {
+  .cnt01 header h3 {
+    color: 111;
   }
-  .hdrWrap header h1.logo a {
+  .cnt01 section {
   }
-  .hdrWrap header ul.gnb {
-  display: flex;
-  column-gap: 65px;
+  .cnt01 section .texts {
+    text-align: center;
   }
-  .hdrWrap header ul.gnb li {
-  text-transform: uppercase;
-  font-size: 12px;
+  .cnt01 section .texts p {
+      margin-top: 20px;
+      line-height: 25px;
   }
-  .hdrWrap header ul.gnb li a {
+.cnt01 section .media{
+    
+    margin-top: 40px;
+}
+  .cnt01 section .media a {
+
+    display: block;
+}
+.cnt01 section .media a img{
+
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+/* END OF CNT01 */
+
+/* CNT 02.CSS */
+.cnt02 {
+    background-color: #faf8f5;
   }
-  .hdrWrap header select {
-  background-color: transparent;
+  .cnt02 header {
+    color: 111;
   }
-  .hdrWrap header select option {
+  .cnt02 header h3 {
+    color: 111;
   }
+  .cnt02 section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .cnt02 section article {
+    width: 240px;
+    margin-top: 40px;
+  }
+  .cnt02 section article .image {
+    width: 100%;
+    height: 120px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+.cnt02 section article .i2{
+    background-image: url('../img/cnt02_img1.gif');
+  }
+.cnt02 section article .i3{
+    background-image: url('../img/cnt02_img2.gif');
+}
+.cnt02 section article .i4{
+    background-image: url('../img/cnt02_img3.gif');
+}
+  .cnt02 section article .texts {
+  }
+  .cnt02 section article .texts h4 {
+    text-align: center;
+  }
+  .cnt02 section article .texts p {
+    margin-top: 20px;
+    line-height: 25px;
+  }
+  .cnt02 section .btn{
+    
+    width: 100%;
+  }
+  .cnt02 section .btn a {
+    display: block;
+    width: 100%;
+  }
+  /* END of CNT 02 */
