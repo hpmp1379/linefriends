@@ -1,0 +1,42 @@
+.cnt05 {
+  color: 111;
+}
+.cnt05 header {
+  color: 111;
+}
+.cnt05 header h3 {
+  color: 111;
+}
+.cnt05 section {
+  color: 111;
+}
+.cnt05 section ul.table {
+  color: 111;
+}
+.cnt05 section ul.table li.tablehead {
+  color: 111;
+}
+.cnt05 section ul.table li.tablehead span {
+  color: 111;
+}
+.cnt05 section ul.table li:not(.tablehead) span.num {
+  color: 111;
+}
+.cnt05 section ul.table li:not(.tablehead) span.area {
+  color: 111;
+}
+.cnt05 section ul.table li:not(.tablehead) span.date {
+  color: 111;
+}
+.cnt05 section ul.table li:not(.tablehead) a {
+  color: 111;
+}
+.cnt05 section ul.pageNum {
+  color: 111;
+}
+.cnt05 section ul.pageNum li {
+  color: 111;
+}
+.cnt05 section ul.pageNum li a {
+  color: 111;
+}
