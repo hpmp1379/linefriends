@@ -2,7 +2,12 @@
 
 /* HEADER.CSS */
 .hdrWrap {
-  background-color: #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: transparent;
 }
 .hdrWrap header {
   display: flex;
@@ -10,20 +15,28 @@
   justify-content: space-between;
   height: 80px;
 }
-.hdrWrap header h1.logo {}
-.hdrWrap header h1.logo a {}
+.hdrWrap header h1.logo {width: calc(100% / 12 * 2);}
+.hdrWrap header h1.logo a {background-image: url('../img/header_logo1.png');color: transparent;display: block;background-size: contain;background-repeat: no-repeat;height: 24px;color: transparent;}
 .hdrWrap header ul.gnb {
   display: flex;
-  column-gap: 65px;
+  width: calc(100% / 12 * 9 - 50px);
+  justify-content: space-between;
 }
 .hdrWrap header ul.gnb li {
   text-transform: uppercase;
   font-size: 12px;
 }
+.hdrWrap header ul.gnb li:hover{
+  border-bottom: 1px solid #fff;
+}
 .hdrWrap header ul.gnb li a {
+  color: #fff;
 }
 .hdrWrap header select {
   background-color: transparent;
+  width: calc(100% / 12);
+  text-align: right;
+  color: #fff;
 }
 .hdrWrap header select option {
 }
@@ -390,6 +403,7 @@ main .texts h2 span {
   font-size: 13px;
   line-height: 20px;
   height: 100px;
+  color: #555;
 }
 .cnt06 section article .texts ul {
 /*   margin-top: 20px; */
@@ -428,46 +442,94 @@ main .texts h2 span {
 
 /* FOOTER.CSS */
 .ftrWrap {
+  background-color: #333;
 }
 .ftrWrap footer {
   display: flex;
   justify-content: space-between;
 }
 .ftrWrap footer h2 {
-  
+  width: calc(100% / 12 * 2);
 }
-.ftrWrap footer h2 a {
-  
-}
+.ftrWrap footer h2 a {background-image: url('../img/footer_logo.png');background-repeat: no-repeat;background-size: contain;color: transparent;display: block;height: 19px;}
 .ftrWrap footer .texts {
-  
+  width: calc(100% / 12 * 7);
 }
 .ftrWrap footer .texts ul.ftrMenu {
-  
+  display: flex;
+  column-gap: 10px;
 }
 .ftrWrap footer .texts ul.ftrMenu li {
-  
+  font-size: 13px;
 }
 .ftrWrap footer .texts ul.ftrMenu li a {
-  
+  color: #ccc;
+}
+.ftrWrap footer .texts ul.ftrMenu li:not(.noborder)::after{
+  content: "";
+  display: inline-block;
+  height: 14px;
+  border-right: 1px solid #aaa;
+  margin-left: 10px;
+  vertical-align: middle;
 }
 .ftrWrap footer .texts ul.info {
-  
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: calc(60% + 20px);
+  column-gap: 10px;
 }
 .ftrWrap footer .texts ul.info li {
-  
+  color: #999;
+  line-height: 20px;
+}
+.ftrWrap footer .texts ul.info li:not(.noborder)::after{
+  content: "";
+  display: inline-block;
+  height: 14px;
+  border-right: 1px solid #999;
+  margin-left: 10px;
+  vertical-align: middle;
 }
 .ftrWrap footer .texts address {
-  
+  margin-top: 20px;
+  color: #999;
 }
 .ftrWrap footer ul.sns {
-  
+  width: calc(100% / 12 * 3);
+  display: flex;
+  flex-wrap: wrap;
 }
 .ftrWrap footer ul.sns li {
-  
+  width: calc(100% / 6);
 }
 .ftrWrap footer ul.sns li a {
-  
+  display: block;
+  background-image: url('../img/footer_sns.png');
+  background-repeat: no-repeat;
+  height: 20px;
+  color: transparent;
+  font-size: 0px;
 }
-
+.ftrWrap footer ul.sns li:nth-of-type(1) a{
+  width: 10px;
+  background-position: 0 0;
+}
+.ftrWrap footer ul.sns li:nth-of-type(2) a{
+  background-position: 0 -20px;
+}
+.ftrWrap footer ul.sns li:nth-of-type(3) a{
+  background-position: 0 -40px;
+}
+.ftrWrap footer ul.sns li:nth-of-type(4) a{
+  background-position: 0 -60px;
+}
+.ftrWrap footer ul.sns li:nth-of-type(5) a{
+  background-position: 0 -80px;
+}
+.ftrWrap footer ul.sns li:nth-of-type(6) a{
+  background-position: -10px 0;
+}
 /* END of FOOTER.CSS */
