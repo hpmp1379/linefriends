@@ -9,7 +9,7 @@ h1,h2,h3,h4,h5,h6{
 	font-weight: 700;
 	color: #444;
 }
-p,li{
+p,li,address{
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 300;
 	font-size: 12px;
@@ -35,13 +35,18 @@ main{
 }
 header{
 	width: 90%;
-	max-width: 1080px;
+	max-width: 1200px;
 	margin: 0 auto;
 	text-align: center;
 }
 section{
 	width: 90%;
 	max-width: 1080px;
+	margin: 0 auto;
+}
+footer{
+	width: 90%;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 

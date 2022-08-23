@@ -23,3 +23,6 @@ select{
 	border: transparent;
 	box-sizing: border-box;
 }
+address{
+	font-style: inherit;
+}

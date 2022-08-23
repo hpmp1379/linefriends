@@ -9,8 +9,6 @@
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  max-width: 1200px;
-  width: 90%;
 }
 .hdrWrap header h1.logo {}
 .hdrWrap header h1.logo a {}
@@ -427,3 +425,49 @@ main .texts h2 span {
   border-color: #000;
 }
 /* End of CNT 06 - Collab */
+
+/* FOOTER.CSS */
+.ftrWrap {
+}
+.ftrWrap footer {
+  display: flex;
+  justify-content: space-between;
+}
+.ftrWrap footer h2 {
+  
+}
+.ftrWrap footer h2 a {
+  
+}
+.ftrWrap footer .texts {
+  
+}
+.ftrWrap footer .texts ul.ftrMenu {
+  
+}
+.ftrWrap footer .texts ul.ftrMenu li {
+  
+}
+.ftrWrap footer .texts ul.ftrMenu li a {
+  
+}
+.ftrWrap footer .texts ul.info {
+  
+}
+.ftrWrap footer .texts ul.info li {
+  
+}
+.ftrWrap footer .texts address {
+  
+}
+.ftrWrap footer ul.sns {
+  
+}
+.ftrWrap footer ul.sns li {
+  
+}
+.ftrWrap footer ul.sns li a {
+  
+}
+
+/* END of FOOTER.CSS */
