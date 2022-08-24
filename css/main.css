@@ -19,3 +19,18 @@ main .texts h2 {
 main .texts h2 span {
   color: 111;
 }
+main ul.mainPage {
+  color: 111;
+}
+main ul.mainPage li.pageOn {
+  color: 111;
+}
+main ul.mainPage li.pageOn a {
+  color: 111;
+}
+main ul.mainPage li {
+  color: 111;
+}
+main ul.mainPage li a {
+  color: 111;
+}
