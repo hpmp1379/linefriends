@@ -11,7 +11,7 @@
 }
 .hdrWrap header {
   display: flex;
-  align-items: last baseline;
+  align-items: center;
   justify-content: space-between;
   height: 70px;
 }
@@ -272,44 +272,51 @@ main ul.mainPage li a {
 
 /* CONTENT 03.CSS - GALLERY */
 .gallery {
-  
+  position: relative;
+  height: calc(100vh - 240px);
 }
 .gallery section {
+  color: 111;
 }
 .gallery section .galSelect {
-  width: calc((100vw - 100%) + 100%);
+  width: 100%;
   height: 100vh;
-  background-color: #fc0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .gallery section h5 {
   text-align: center;
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  right: 0;
 }
 .gallery section h5 span {
-  
+  color: 111;
 }
 .gallery section .galList {
-  
+  color: 111;
 }
 .gallery section .galList ul.image {
-  
+  color: 111;
 }
 .gallery section .galList ul.image li {
-  
 }
 .gallery section .galList ul.image li a {
-  
+  color: 111;
 }
 .gallery section .galList ul.btn {
-  
+  color: 111;
 }
 .gallery section .galList ul.btn li {
-  
+  color: 111;
 }
 .gallery section .galList ul.btn .left {
-  
+  color: 111;
 }
 .gallery section .galList ul.btn .right {
-  
+  color: 111;
 }
 
 /* END of CNT 03 */
