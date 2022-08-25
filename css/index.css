@@ -311,6 +311,7 @@ main ul.mainPage li a {
   width: 340px;
   height: 40px;
   margin: 0 auto;
+  z-index: 1;
 }
 .gallery section .thumbnail ul.galList {
   width: 100%;
@@ -322,12 +323,18 @@ main ul.mainPage li a {
   width: calc(100% / 5 - 5px);
   height: 100%;
 }
+a.galOn,
+.gallery section .thumbnail ul.galList li:hover a{
+  border: 1px solid #16db20;
+  box-sizing: border-box;
+}
 .gallery section .thumbnail ul.galList li a {
   display: block;
   background-size: contain;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+  background-origin: border-box;
 }
 .gallery section .thumbnail ul.galList .g1 a{
   background-image: url('../img/gallery_img1.jpg');
@@ -352,25 +359,27 @@ main ul.mainPage li a {
   left: 0;
   right: 0;
   margin: 0 auto;
+  z-index: -1;
 }
 .gallery section .thumbnail ul.btn li {
   position: absolute;
   width: 10px;
   height: 10px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-bottom: transparent;
+  cursor: pointer;
 }
 .gallery section .thumbnail ul.btn .left {
-  top: 0;
+  top: 50%;
   left: 0;
   border-right: transparent;
-  transform: translateX(-100%) rotate(-45deg);
+  transform: translate(-150%, -50%) rotate(-45deg);
 }
 .gallery section .thumbnail ul.btn .right {
-  top: 0;
+  top: 50%;
   right: 0;
   border-left: transparent;
-  transform: translateX(100%) rotate(45deg);
+  transform: translate(150%, -50%) rotate(45deg);
 }
 
 /* END of CNT 03 */
@@ -451,6 +460,9 @@ main ul.mainPage li a {
   font-size: 12px;
   font-weight: 800;
   color: #999;
+}
+.cnt05 section ul.table li:nth-of-type(4){
+  border-bottom: 1px solid #ccc;
 }
 .cnt05 section ul.table li span {
   display: block;
