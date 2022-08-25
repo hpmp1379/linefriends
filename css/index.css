@@ -244,7 +244,7 @@ main ul.mainPage li a {
 }
 .cnt02 section .btn{
   width: 100%;
-  margin-top: 80px;
+  margin-top: 140px;
 }
 .cnt02 section .btn a {
   display: block;
@@ -284,6 +284,10 @@ main ul.mainPage li a {
   position: absolute;
   top: 0;
   left: 0;
+  background-image: url('../img/gallery_img1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .gallery section h5 {
   text-align: center;
@@ -291,32 +295,82 @@ main ul.mainPage li a {
   bottom: 120px;
   left: 0;
   right: 0;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
-.gallery section h5 span {
-  color: 111;
+.gallery section h5 ion-icon{
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
 }
-.gallery section .galList {
-  color: 111;
+.gallery section .thumbnail{
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  width: 340px;
+  height: 40px;
+  margin: 0 auto;
 }
-.gallery section .galList ul.image {
-  color: 111;
+.gallery section .thumbnail ul.galList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-.gallery section .galList ul.image li {
+.gallery section .thumbnail ul.galList li {
+  width: calc(100% / 5 - 5px);
+  height: 100%;
 }
-.gallery section .galList ul.image li a {
-  color: 111;
+.gallery section .thumbnail ul.galList li a {
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
-.gallery section .galList ul.btn {
-  color: 111;
+.gallery section .thumbnail ul.galList .g1 a{
+  background-image: url('../img/gallery_img1.jpg');
 }
-.gallery section .galList ul.btn li {
-  color: 111;
+.gallery section .thumbnail ul.galList .g2 a{
+  background-image: url('../img/gallery_img2.jpg');
 }
-.gallery section .galList ul.btn .left {
-  color: 111;
+.gallery section .thumbnail ul.galList .g3 a{
+  background-image: url('../img/gallery_img3.jpg');
 }
-.gallery section .galList ul.btn .right {
-  color: 111;
+.gallery section .thumbnail ul.galList .g4 a{
+  background-image: url('../img/gallery_img4.jpg');
+}
+.gallery section .thumbnail ul.galList .g5 a{
+  background-image: url('../img/gallery_img5.jpg');
+}
+.gallery section .thumbnail ul.btn {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.gallery section .thumbnail ul.btn li {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fff;
+  border-bottom: transparent;
+}
+.gallery section .thumbnail ul.btn .left {
+  top: 0;
+  left: 0;
+  border-right: transparent;
+  transform: translateX(-100%) rotate(-45deg);
+}
+.gallery section .thumbnail ul.btn .right {
+  top: 0;
+  right: 0;
+  border-left: transparent;
+  transform: translateX(100%) rotate(45deg);
 }
 
 /* END of CNT 03 */
