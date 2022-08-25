@@ -11,12 +11,12 @@
 }
 .hdrWrap header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   height: 70px;
+  align-items: center;
 }
 .hdrWrap header h1.logo {width: calc(100% / 12 * 2);}
-.hdrWrap header h1.logo a {background-image: url('../img/header_logo1.png');color: transparent;display: block;background-size: contain;background-repeat: no-repeat;height: 24px;color: transparent;}
+.hdrWrap header h1.logo a {background-image: url('../img/header_logo1.png');color: transparent;display: block;background-size: contain;background-repeat: no-repeat;height: 24px;}
 .hdrWrap header ul.gnb {
   display: flex;
   width: calc(100% / 12 * 9 - 100px);
@@ -32,13 +32,37 @@
 .hdrWrap header ul.gnb li a {
   color: #fff;
 }
-.hdrWrap header select {
+.hdrWrap header .lang {
   background-color: transparent;
   width: calc(100% / 12);
   text-align: right;
   color: #fff;
+  position: relative;
 }
-.hdrWrap header select option {
+.hdrWrap header .lang a.langSel {
+  color: #fff;
+  font-size: 13px;
+}
+.hdrWrap header .lang ul.langBox{
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  padding: 10px 20px;
+}
+.hdrWrap header .lang ul.langBox li{
+  color: #fff;
+  text-align: left;
+  margin-top: 5px;
+}
+.hdrWrap header .lang ul.langBox li{
+  margin-top: 5px;
+}
+.hdrWrap header .lang ul.langBox li a{
+  font-size: 13px;
+}
+.hdrWrap header .lang ul.langBox li a:hover{
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
 }
 /* END OF HEADER.CSS */
 

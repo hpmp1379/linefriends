@@ -1,0 +1,675 @@
+/* RESPONSIVE.CSS */
+
+/* Mediaquery x768 */
+@media screen and (max-width:768px){
+  /* HEADER.CSS */
+  /* 스크롤 할때 높이값 줄이기  */
+  .hdrWrap {
+  }
+  .hdrWrap header {
+    justify-content: center;
+  }
+  .hdrWrap header h1.logo {width: 100%;}
+  .hdrWrap header h1.logo a {
+    
+    }
+  .hdrWrap header ul.gnb {
+    display: none;
+  }
+  .hdrWrap header ul.gnb li {
+  }
+  .hdrWrap header ul.gnb li:hover{
+  }
+  .hdrWrap header ul.gnb li a {
+  }
+  .hdrWrap header .lang {
+    width: 100px;
+    right: 0;
+    position: absolute;
+  }
+  .hdrWrap header .lang a.langSel {
+    
+  }
+  .hdrWrap header .lang ul.langBox{
+    display: none;
+  }
+  .hdrWrap header .lang ul.langBox li{
+    display: none;
+  }
+  .hdrWrap header .lang ul.langBox li a{
+    display: none;
+  }
+  .hdrWrap header .lang ul.langBox li a:hover{
+    display: none;
+  }
+  /* END OF HEADER.CSS */
+
+  /* MAIN.CSS */
+  main {
+    width: 100%;
+    position: relative;
+  }
+  main ul.mainGallery {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  main ul.mainGallery::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/main_check.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  main ul.mainGallery .mainSelect{
+    opacity: 1;
+  }
+  main ul.mainGallery li{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+  }
+  main ul.mainGallery li:nth-of-type(1){
+    background-image:url("../img/main01.jpg");
+  }
+  main ul.mainGallery li:nth-of-type(2){
+    background-image:url("../img/main02.jpg");
+  }
+  main ul.mainGallery li:nth-of-type(3){
+    background-image:url("../img/main03.jpg");
+  }
+  main ul.mainGallery li:nth-of-type(4){
+    background-image:url("../img/main04.jpg");
+  }
+  main ul.mainGallery li:nth-of-type(5){
+    background-image:url("../img/main05.jpg");
+  }
+  main ul.mainGallery li:nth-of-type(6){
+    background-image:url("../img/main06.jpg");
+  }
+  main ul.mainGallery li:nth-of-type(7){
+    background-image:url("../img/main07.jpg");
+  }
+  main ul.mainGallery li:nth-of-type(8){
+    background-image:url("../img/main08.jpg");
+  }
+  main .texts {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    /*! left: 50%; */
+    top: 50%;
+  }
+  main .texts p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 20px;
+  }
+  main .texts h2 {margin-top: 20px;}
+  main .texts h2 span {
+    color: #fff;
+    font-size: 0;
+    display: block;
+    background-image: url('../img/main_logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 56px;
+  }
+  main ul.btn{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 100%;
+  }
+  main ul.btn li{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #eee;
+    position: absolute;
+    top: 50%;
+    border-bottom: transparent;
+    cursor: pointer;
+  }
+  main ul.btn .left{
+    left: 90px;
+    border-right: transparent;
+    transform: rotate(-45deg) translateY(-50%);
+  }
+  main ul.btn .right{
+    right: 90px;
+    border-left: transparent;
+    transform: rotate(45deg) translateY(-50%);
+  }
+
+  main ul.mainPage {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  main ul.mainPage li.pageOn {
+    background-color: #ccc;
+  }
+  main ul.mainPage li.pageOn a {
+    color: 111;
+  }
+  main ul.mainPage li {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    font-size: 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  main ul.mainPage li a {
+    color: 111;
+  }
+  /* END OF MAIN.CSS */
+
+  /* CNT 01.CSS - ABOUT US*/
+  .cnt01 {}
+  .cnt01 section .texts {
+    text-align: center;
+  }
+  .cnt01 section .texts p {
+    margin-top: 20px;
+    line-height: 25px;
+  }
+  .cnt01 section .media{
+    margin-top: 40px;
+  }
+  .cnt01 section .media a {
+    display: block;
+  }
+  .cnt01 section .media a img{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  /* END OF CNT01 - ABOUTUS*/
+
+  /* CNT 02.CSS - COREBUSIENSS */
+  .cnt02 {
+    background-color: #faf8f5;
+  }
+  .cnt02 section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .cnt02 section article {
+    width: 240px;
+    margin-top: 40px;
+  }
+  .cnt02 section article .image {
+    width: 100%;
+    height: 120px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .cnt02 section article .i2{
+    background-image: url('../img/cnt02_img1.gif');
+  }
+  .cnt02 section article .i3{
+    background-image: url('../img/cnt02_img2.gif');
+  }
+  .cnt02 section article .i4{
+    background-image: url('../img/cnt02_img3.gif');
+  }
+  .cnt02 section article .texts {}
+  .cnt02 section article .texts h4 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .cnt02 section article .texts p {
+    margin-top: 20px;
+    line-height: 25px;
+  }
+  .cnt02 section .btn{
+    width: 100%;
+    margin-top: 140px;
+  }
+  .cnt02 section .btn a {
+    display: block;
+    width: 250px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    background-color: #555;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .cnt02 section .btn a span{
+    background-image: url('../img/cnt02_img4.png');
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin-bottom: 3px;
+  }
+  /* END of CNT 02 - COREBUSINESS */
+
+  /* CONTENT 03.CSS - GALLERY */
+  .gallery {
+    position: relative;
+    height: calc(100vh - 240px);
+  }
+  .gallery section {
+    color: 111;
+  }
+  .gallery section .galSelect {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../img/gallery_img1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .gallery section h5 {
+    text-align: center;
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+  }
+  .gallery section h5 ion-icon{
+    width: 20px;
+    height: 20px;
+    vertical-align: top;
+  }
+  .gallery section .thumbnail{
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    width: 340px;
+    height: 40px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+  .gallery section .thumbnail ul.galList {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .gallery section .thumbnail ul.galList li {
+    width: calc(100% / 5 - 5px);
+    height: 100%;
+  }
+  a.galOn,
+  .gallery section .thumbnail ul.galList li:hover a{
+    border: 1px solid #16db20;
+    box-sizing: border-box;
+  }
+  .gallery section .thumbnail ul.galList li a {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-origin: border-box;
+  }
+  .gallery section .thumbnail ul.galList .g1 a{
+    background-image: url('../img/gallery_img1.jpg');
+  }
+  .gallery section .thumbnail ul.galList .g2 a{
+    background-image: url('../img/gallery_img2.jpg');
+  }
+  .gallery section .thumbnail ul.galList .g3 a{
+    background-image: url('../img/gallery_img3.jpg');
+  }
+  .gallery section .thumbnail ul.galList .g4 a{
+    background-image: url('../img/gallery_img4.jpg');
+  }
+  .gallery section .thumbnail ul.galList .g5 a{
+    background-image: url('../img/gallery_img5.jpg');
+  }
+  .gallery section .thumbnail ul.btn {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+  }
+  .gallery section .thumbnail ul.btn li {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-bottom: transparent;
+    cursor: pointer;
+  }
+  .gallery section .thumbnail ul.btn .left {
+    top: 50%;
+    left: 0;
+    border-right: transparent;
+    transform: translate(-150%, -50%) rotate(-45deg);
+  }
+  .gallery section .thumbnail ul.btn .right {
+    top: 50%;
+    right: 0;
+    border-left: transparent;
+    transform: translate(150%, -50%) rotate(45deg);
+  }
+
+  /* END of CNT 03 */
+
+  /* CONTENT 04.CSS - MEDIA */
+  .cnt04 {
+    background-color: #f7f7f7;
+  }
+  .cnt04 section {
+    margin-top: 40px;
+  }
+  .cnt04 section article {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cnt04 section article:nth-of-type(2),
+  .cnt04 section article:nth-of-type(3){
+    margin-top: 40px;
+  }
+  .cnt04 section article .image {
+    width: calc(100% / 3 * 2);
+    height: 360px;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .cnt04 section article .i5{
+    background-image: url('../img/cnt04_img1.jpg');
+  }
+  .cnt04 section article .i6{
+    background-image: url('../img/cnt04_img2.jpg');
+  }
+  .cnt04 section article .i7{
+    background-image: url('../img/cnt04_img3.jpg');
+    background-size: contain;
+  }
+  .cnt04 section article .texts {
+    width: calc(100% / 3);
+    background-color:#fff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .cnt04 section article .texts h5 {
+    line-height: 24px;
+  }
+  .cnt04 section article .texts p {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cnt04 section article .texts span {
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    color: #999;
+  }
+
+  /* END of CNT 04 - MEDIA */
+
+  /* CNT 05. CSS - NOTICE */
+  .cnt05 {}
+  .cnt05 section {
+    margin-top: 40px;
+  }
+  .cnt05 section ul.table li{
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border-top: 1px solid #ccc;
+  }
+  .cnt05 section ul.table li.tablehead {
+    height: 40px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #999;
+  }
+  .cnt05 section ul.table li:nth-of-type(4){
+    border-bottom: 1px solid #ccc;
+  }
+  .cnt05 section ul.table li span {
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .cnt05 section ul.table li span.num {
+    width: calc(100% / 12);
+  }
+  .cnt05 section ul.table li span.area {
+    width: calc(100% / 12);
+  }
+  .cnt05 section ul.table li span.atitle {
+    width: calc(100% / 12 * 8);
+  }
+  .cnt05 section ul.table li span.date {
+    width: calc(100% / 12 * 2);
+  }
+  .cnt05 section ul.table li a {
+    width: calc(100% / 12 * 8);
+    display: block;
+    font-weight: 800;
+    margin-left: 20px;
+  }
+  .cnt05 section ul.pageNum{}
+  .cnt05 section ul.pageNum::before,
+  .cnt05 section ul.pageNum::after{
+    display: none;
+  }
+
+  /* END of CNT 05 - NOTICE */
+
+  /* CNT 06 - Collab */
+  .cnt06 {
+
+  }
+  .cnt06 section {
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
+  .cnt06 section article {
+    width: calc(50% - 10px);
+  }
+  .cnt06 section article .image {
+
+    width: 100%;
+    height: 360px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .cnt06 section article .i8{
+    background-image: url('../img/cnt06_img1.jpg');
+  }
+  .cnt06 section article .i9{
+    background-image: url('../img/cnt06_img2.jpg');
+  }
+  .cnt06 section article .i10{
+    background-image: url('../img/cnt06_img3.jpg');
+  }
+  .cnt06 section article .i11{
+    background-image: url('../img/cnt06_img4.jpg');
+  }
+
+  .cnt06 section article .texts {
+    margin-top: 20px;
+  }
+  .cnt06 section article .texts h4 {
+    line-height: 40px;
+  }
+  .cnt06 section article .texts p {
+    font-size: 13px;
+    line-height: 20px;
+    height: 100px;
+    color: #555;
+  }
+  .cnt06 section article .texts ul {
+    /*   margin-top: 20px; */
+    display: flex;
+    column-gap: 40px;
+  }
+  .cnt06 section article .texts ul li {
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+  }
+  .cnt06 section article .texts ul li:hover>a{
+    color: #000;
+    border-color: #000;
+  }
+  .cnt06 section article .texts ul li a {
+    color: #999;
+    /*! display: block; */
+  }
+  .cnt06 section article .texts ul li:not(.hide)::after{
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #999;
+    border-left: transparent;
+    border-bottom: transparent;
+    transform: translateY(4px) rotate(45deg);
+    margin-left: 6px;
+    cursor: pointer;
+  }
+  .cnt06 section article .texts ul li:hover:not(.hide)::after{
+    border-color: #000;
+  }
+  /* End of CNT 06 - Collab */
+
+  /* FOOTER.CSS */
+  .ftrWrap {
+    background-color: #333;
+  }
+  .ftrWrap footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .ftrWrap footer h2 {
+    width: calc(100% / 12 * 2);
+  }
+  .ftrWrap footer h2 a {background-image: url('../img/footer_logo.png');background-repeat: no-repeat;background-size: contain;color: transparent;display: block;height: 19px;}
+  .ftrWrap footer .texts {
+    width: calc(100% / 12 * 7);
+  }
+  .ftrWrap footer .texts ul.ftrMenu {
+    display: flex;
+    column-gap: 10px;
+  }
+  .ftrWrap footer .texts ul.ftrMenu li {
+    font-size: 13px;
+  }
+  .ftrWrap footer .texts ul.ftrMenu li a {
+    color: #ccc;
+  }
+  .ftrWrap footer .texts ul.ftrMenu li:not(.noborder)::after{
+    content: "";
+    display: inline-block;
+    height: 14px;
+    border-right: 1px solid #aaa;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .ftrWrap footer .texts ul.info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: calc(60% + 20px);
+    column-gap: 10px;
+  }
+  .ftrWrap footer .texts ul.info li {
+    color: #999;
+    line-height: 20px;
+  }
+  .ftrWrap footer .texts ul.info li:not(.noborder)::after{
+    content: "";
+    display: inline-block;
+    height: 14px;
+    border-right: 1px solid #999;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .ftrWrap footer .texts address {
+    margin-top: 20px;
+    color: #999;
+  }
+  .ftrWrap footer ul.sns {
+    width: calc(100% / 12 * 3);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ftrWrap footer ul.sns li {
+    width: calc(100% / 6);
+  }
+  .ftrWrap footer ul.sns li a {
+    display: block;
+    background-image: url('../img/footer_sns.png');
+    background-repeat: no-repeat;
+    height: 20px;
+    color: transparent;
+    font-size: 0px;
+  }
+  .ftrWrap footer ul.sns li:nth-of-type(1) a{
+    width: 10px;
+    background-position: 0 0;
+  }
+  .ftrWrap footer ul.sns li:nth-of-type(2) a{
+    background-position: 0 -20px;
+  }
+  .ftrWrap footer ul.sns li:nth-of-type(3) a{
+    background-position: 0 -40px;
+  }
+  .ftrWrap footer ul.sns li:nth-of-type(4) a{
+    background-position: 0 -60px;
+  }
+  .ftrWrap footer ul.sns li:nth-of-type(5) a{
+    background-position: 0 -80px;
+  }
+  .ftrWrap footer ul.sns li:nth-of-type(6) a{
+    background-position: -10px 0;
+  }
+  /* END of FOOTER.CSS */
+}

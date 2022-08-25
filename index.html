@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+    <!-- CSS Responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
     <!-- JQUERY/JS -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -34,16 +36,21 @@
                 <li><a href="#">Shop Online</a></li>
                 <li><a href="#">Career</a></li>
             </ul>
-            <select name="language" id="lang" class="lang">
-                <option value="kr">한국어</option>
-                <option value="en">English</option>
-                <option value="jp">日本語</option>
-            </select>
-            <!-- <ul class="lang">
-                <li><a href="#">한국어</a></li>
-                <li><a href="#">EN</a></li>
-                <li><a href="#">日本語</a></li>
-            </ul> -->
+            <div class="lang">
+                <a href="#" class="langSel">
+                    한국어
+                    <!-- 클릭했을때 remove/add class -->
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                    <!-- <ion-icon name="chevron-up-outline"></ion-icon> -->
+                </a>
+                <ul class="langBox">
+                    <li><a href="#">한국어</a></li>
+                    <li><a href="#">EN</a></li>
+                    <li><a href="#">日本語</a></li>
+                    <li><a href="#">中文(简体)</a></li>
+                    <li><a href="#">中文(繁體)</a></li>
+                </ul>
+            </div>
         </header>
     </div>
 
@@ -79,7 +86,7 @@
         </ul>
     </main>
 
-    <!-- 1. About Line Friends -->
+    <!-- 1.About Line Friends -->
     <div class="content cnt01" id="cnt01">
         <header>
             <h3>ABOUT<br>LINE FRIENDS</h3>
@@ -149,7 +156,7 @@
 
     </div>
 
-    <!-- 3. Gallery -->
+    <!-- 3.Gallery -->
     <div class="content cnt03 gallery" id="cnt03">
         <section>
             <div class="galSelect"></div>
@@ -265,7 +272,7 @@
         </section>
     </div>
 
-    <!-- 6. Collab -->
+    <!-- 6.Collab -->
     <div class="content cnt06">
         <section>
             <article>
