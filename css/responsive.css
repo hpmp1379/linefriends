@@ -4,31 +4,18 @@
 @media screen and (max-width:768px){
   /* HEADER.CSS */
   /* 스크롤 할때 높이값 줄이기  */
-  .hdrWrap {
-  }
+  .hdrWrap {}
   .hdrWrap header {
     justify-content: center;
   }
   .hdrWrap header h1.logo {width: 100%;}
-  .hdrWrap header h1.logo a {
-    
-    }
   .hdrWrap header ul.gnb {
     display: none;
-  }
-  .hdrWrap header ul.gnb li {
-  }
-  .hdrWrap header ul.gnb li:hover{
-  }
-  .hdrWrap header ul.gnb li a {
   }
   .hdrWrap header .lang {
     width: 100px;
     right: 0;
     position: absolute;
-  }
-  .hdrWrap header .lang a.langSel {
-    
   }
   .hdrWrap header .lang ul.langBox{
     display: none;

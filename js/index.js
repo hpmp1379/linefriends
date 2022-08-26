@@ -15,8 +15,18 @@ $(function(){
             count = 0;
         }
     });
+    // Header scroll (미완성)
+    var m1 = $('.hdrWrap').offset().top;
+    $(document).on("scroll",function(){
+        if($(window).scrollTop() > m1){
+            $('.hdrWrap').css({"background-color":"#fff"});
+        }else{
+            $('.hdrWrap').css({"background-color":"transparent"});
+        }
+    })
 
-    // main click left
+
+    // Main click left
     $('main ul.btn li.left').click(function(){
         let currentImg = $('main .mainGallery .mainSelect');
         let prevImg = currentImg.prev();
@@ -29,7 +39,7 @@ $(function(){
             lastImg.addClass('mainSelect').fadeIn();
         }
     });
-    //main click right
+    // Main click right
     $('main ul.btn li.right').click(function(){
         let currentImg = $('main .mainGallery .mainSelect');
         let nextImg = currentImg.next();
@@ -42,10 +52,28 @@ $(function(){
             firstImg.fadeIn(1000).addClass('mainSelect');
         }
     });
-    //main click page
+    // Main click page
     $('main ul.mainPage li').click(function(){
         // console.log('hello');
         $('main ul.mainPage li.pageOn').removeClass('pageOn');
         $(this).addClass('pageOn');
+    })
+
+    // Content 01
+    // 모달 창
+    let $body = $('body'),
+        $thumbnail = $body.find('.cnt01 .media a'),
+        $popup = $body.find('.cnt01Popup'),
+        $close = $body.find('.cnt01Popup .close');
+
+    $thumbnail.click(function(){
+        $popup.fadeIn(300, function(){
+            $popup.find('section').fadeIn(200);
+        });
+    })
+    $close.click(function(){
+        $popup.fadeOut(300, function(){
+            $popup.find('section').hide(500);
+        });
     })
 })
