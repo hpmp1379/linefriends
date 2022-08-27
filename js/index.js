@@ -4,14 +4,15 @@
 $(function(){
     let count = 0;
     // lang 선택시 드랍메뉴 toggle
-    $('.hdrWrap header .lang a.langSel').click(function(){
+    $('.hdrWrap header .lang button.langSel').click(function(){
+        $(this).siblings('.langBox').stop().slideToggle(300); //클릭시 드랍/닫기
         if (count == 0){
             $(this).children('ion-icon').attr("name","chevron-up-outline");
-            $(this).siblings('.langBox').stop().slideDown(300);
+            // $(this).siblings('.langBox').stop().slideDown(300); //line7
             count = 1;
         }else{
             $(this).children('ion-icon').attr("name","chevron-down-outline");
-            $(this).siblings('.langBox').stop().slideUp(300);
+            // $(this).siblings('.langBox').stop().slideUp(300); //line7
             count = 0;
         }
     });
@@ -20,8 +21,13 @@ $(function(){
     $(document).on("scroll",function(){
         if($(window).scrollTop() > m1){
             $('.hdrWrap').css({"background-color":"#fff"});
+            $('.hdrWrap h1.logo a').css({"background-image":"url('../img/header_logo2.png')"});
+            $('.hdrWrap ul.gnb li a, .hdrWrap .lang .langSel').css("color","#000");
         }else{
             $('.hdrWrap').css({"background-color":"transparent"});
+            $('.hdrWrap h1.logo a').css({"background-image":"url('../img/header_logo1.png')"});
+            $('.hdrWrap ul.gnb li a, .hdrWrap .lang .langSel').css("color","#fff");
+
         }
     })
 

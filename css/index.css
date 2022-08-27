@@ -39,9 +39,11 @@
   color: #fff;
   position: relative;
 }
-.hdrWrap header .lang a.langSel {
+.hdrWrap header .lang button.langSel {
   color: #fff;
   font-size: 13px;
+  background-color: transparent;
+  border: none;
 }
 .hdrWrap header .lang ul.langBox{
   position: absolute;
