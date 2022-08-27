@@ -26,3 +26,6 @@ select{
 address{
 	font-style: inherit;
 }
+button{
+	border: none;
+}

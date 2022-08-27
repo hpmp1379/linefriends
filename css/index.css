@@ -216,9 +216,7 @@ main ul.mainPage li {
   box-sizing: border-box;
   border: 1px solid #ccc;
   cursor: pointer;
-}
-main ul.mainPage li a {
-/*   color: 111; */
+  transition: background-color 0.3s;
 }
 /* END OF MAIN.CSS */
 
@@ -363,12 +361,11 @@ main ul.mainPage li a {
   width: calc(100% / 5 - 5px);
   height: 100%;
 }
-a.galOn,
-.gallery section .thumbnail ul.galList li:hover a{
+.gallery section .thumbnail ul.galList li:hover button, button.galOn{
   border: 1px solid #16db20;
   box-sizing: border-box;
 }
-.gallery section .thumbnail ul.galList li a {
+.gallery section .thumbnail ul.galList li button{
   display: block;
   background-size: contain;
   background-repeat: no-repeat;
@@ -376,19 +373,19 @@ a.galOn,
   width: 100%;
   background-origin: border-box;
 }
-.gallery section .thumbnail ul.galList .g1 a{
+.gallery section .thumbnail ul.galList .g1 button{
   background-image: url('../img/gallery_img1.jpg');
 }
-.gallery section .thumbnail ul.galList .g2 a{
+.gallery section .thumbnail ul.galList .g2 button{
   background-image: url('../img/gallery_img2.jpg');
 }
-.gallery section .thumbnail ul.galList .g3 a{
+.gallery section .thumbnail ul.galList .g3 button{
   background-image: url('../img/gallery_img3.jpg');
 }
-.gallery section .thumbnail ul.galList .g4 a{
+.gallery section .thumbnail ul.galList .g4 button{
   background-image: url('../img/gallery_img4.jpg');
 }
-.gallery section .thumbnail ul.galList .g5 a{
+.gallery section .thumbnail ul.galList .g5 button{
   background-image: url('../img/gallery_img5.jpg');
 }
 .gallery section .thumbnail ul.btn {
