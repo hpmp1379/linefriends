@@ -1,41 +1,61 @@
 // Index.html - JS
-
 // Header
 $(function(){
-    let count = 0;
-    // lang 선택시 드랍메뉴 toggle
-    $('.hdrWrap header .lang button.langSel').click(function(){
-        $(this).siblings('.langBox').stop().slideToggle(300); //클릭시 드랍/닫기
+    let $body = $('body'), // 변수선언
+
+        count = 0;
+
+    // Header 이벤트
+    $hdrWrap = $body.find('.hdrWrap'), //헤더 변수
+    $hdrTop = $hdrWrap.offset().top; //header top offset 값 = 0;
+    $hdrWrap.find('.lang button.langSel').click(function(){  // -lang 선택시 드랍메뉴 toggle
+        $(this).siblings('.langBox').stop().slideToggle(300);  //클릭시 드랍/닫기
         if (count == 0){
             $(this).children('ion-icon').attr("name","chevron-up-outline");
-            // $(this).siblings('.langBox').stop().slideDown(300); //line7
             count = 1;
         }else{
             $(this).children('ion-icon').attr("name","chevron-down-outline");
-            // $(this).siblings('.langBox').stop().slideUp(300); //line7
             count = 0;
         }
     });
-    // Header scroll (미완성)
-    var m1 = $('.hdrWrap').offset().top;
-    $(document).on("scroll",function(){
-        if($(window).scrollTop() > m1){
-            $('.hdrWrap').css({"background-color":"#fff"});
-            $('.hdrWrap h1.logo a').css({"background-image":"url('../img/header_logo2.png')"});
-            $('.hdrWrap ul.gnb li a, .hdrWrap .lang .langSel').css("color","#000");
-        }else{
-            $('.hdrWrap').css({"background-color":"transparent"});
-            $('.hdrWrap h1.logo a').css({"background-image":"url('../img/header_logo1.png')"});
-            $('.hdrWrap ul.gnb li a, .hdrWrap .lang .langSel').css("color","#fff");
 
+    $(document).on("scroll",function(){  // Header -scroll 효과
+        let $windowTop = $(window).scrollTop();  //스크롤 할수록 top offset 값 +
+        if($windowTop > $hdrTop){
+            $hdrWrap.css({"background-color":"#fff","border-bottom":"1px solid #eee"}),
+            $hdrWrap.find("h1.logo a").css("background-image","url('img/header_logo2.png')"),
+            $hdrWrap.find("button, ul.gnb a").css("color","#000");
+            $hdrWrap.find('ul.gnb li').hover(function(){
+                $(this).css("border-bottom","1px solid #000");
+            },
+                function(){
+                    $(this).css("border-bottom","none");
+                }
+            );
+        }else{
+            $hdrWrap.css({"background-color":"transparent","border-bottom":"none"}),
+            $hdrWrap.find("h1.logo a").css("background-image","url('img/header_logo1.png')"),
+            $hdrWrap.find("button, ul.gnb a").css("color","#fff");
+            $hdrWrap.find('ul.gnb li').hover(function(){
+                $(this).css("border-bottom","1px solid #fff");
+            },
+                function(){
+                    $(this).css("border-bottom","none");
+                }
+            );
         }
     })
 
 
+    $main = $('main'),
+    $mainLeft = $main.find('ul.btn li.left'),
+    $mainRight = $main.find('ul.btn li.right'),
+    $mainSelect = $main.find('.mainGallery .mainSelect'),
+    $prevSelect = $mainSelect.prev(),
+    $nextSelect = $mainSelect.next();
+
     // Main click left
-    $('main ul.btn li.left').click(function(){
-        let currentImg = $('main .mainGallery .mainSelect');
-        let prevImg = currentImg.prev();
+    $mainLeft.click(function(){
         let lastImg = $('main .mainGallery li').last();
         if(prevImg.length){
             currentImg.removeClass('mainSelect').fadeOut();
@@ -46,7 +66,7 @@ $(function(){
         }
     });
     // Main click right
-    $('main ul.btn li.right').click(function(){
+    $mainRight.click(function(){
         let currentImg = $('main .mainGallery .mainSelect');
         let nextImg = currentImg.next();
         let firstImg = $('main .mainGallery li').first();
@@ -58,7 +78,7 @@ $(function(){
             firstImg.fadeIn(1000).addClass('mainSelect');
         }
     });
-    // Main click page
+    // Main click pageList
     $('main ul.mainPage li').click(function(){
         // console.log('hello');
         $('main ul.mainPage li.pageOn').removeClass('pageOn');
@@ -67,8 +87,7 @@ $(function(){
 
     // Content 01
     // 모달 창
-    let $body = $('body'),
-        $thumbnail = $body.find('.cnt01 .media a'),
+    let $thumbnail = $body.find('.cnt01 .media a'),
         $popup = $body.find('.cnt01Popup'),
         $close = $body.find('.cnt01Popup .close');
 
