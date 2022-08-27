@@ -429,12 +429,15 @@ main ul.mainPage li {
   margin-top: 40px;
 }
 .cnt04 section article {
-  display: flex;
-  justify-content: space-between;
+  /*! display: flex; */
+  /*! justify-content: space-between; */
 }
 .cnt04 section article:nth-of-type(2),
 .cnt04 section article:nth-of-type(3){
   margin-top: 40px;
+}
+.cnt04 section article a{
+  display: flex;
 }
 .cnt04 section article .image {
   width: calc(100% / 3 * 2);
