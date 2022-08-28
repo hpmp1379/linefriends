@@ -1,11 +1,10 @@
-// Index.html - JS
-// Header
+// Index.html - JS/JQuery
 $(function(){
     let $body = $('body'), // 변수선언
-        $windowTop, // cnt01
+        $windowTop, // 사용범위 cnt01
         count = 0;
 
-    // Header
+    // Header JQuery
     $hdrWrap = $body.find('.hdrWrap'), //헤더 변수
     $hdrTop = 0; //header.offsetTop() 값 = 0;
     // header 맨위에서 스크롤했을때 css변경
@@ -49,72 +48,45 @@ $(function(){
             count = 0;
         }
     });
-    // End of header
+    // End of header -----
 
-    // MAIN
+    // MAIN JQuery 
     $main = $body.find('main'),
     $mainLeft = $main.find('ul.btn li.left'),
     $mainRight = $main.find('ul.btn li.right'),
     $mainGallery = $main.find('ul.mainGallery'),
     $mainSelect = $mainGallery.find('li');
-
-    // Main click left
-    // $mainLeft.click(function(){
-    //     let lastImg = $('main .mainGallery li').last();
-    //     if(prevImg.length){
-    //         currentImg.removeClass('mainSelect').fadeOut();
-    //         prevImg.addClass('mainSelect').fadeIn();
-    //     }else{
-    //         currentImg.removeClass('mainSelect').fadeOut();
-    //         lastImg.addClass('mainSelect').fadeIn();
-    //     }
-    // });
-    // Main click right
-    // $mainRight.click(function(){
-    //     let currentImg = $('main .mainGallery .mainSelect');
-    //     let nextImg = currentImg.next();
-    //     let firstImg = $('main .mainGallery li').first();
-    //     if(nextImg.length){
-    //         currentImg.removeClass('mainSelect').fadeOut();
-    //         nextImg.addClass('mainSelect').fadeIn();
-    //     }else{
-    //         currentImg.fadeOut(1000).removeClass('mainSelect');
-    //         firstImg.fadeIn(1000).addClass('mainSelect');
-    //     }
-    // });
-
     // Main click left/Right arrow - 클릭시 왼쪽/오른쪽 이미지 보여주기
     let $mainLast = $main.find('ul.mainGallery li:last-child').index();
         $mainFirst = $main.find('ul.mainGallery li:first-child').index();
-
-    $mainLeft.click(function(){
+    $mainLeft.click(function(){ //왼쪽 화살표를 클릭했을때
         let $mainIndex = $main.find('ul.mainGallery li.mainSelect').index();
         console.log($mainIndex + '!!!' +$mainLast);
         $mainSelect.removeClass('mainSelect');
-        if($mainIndex == 0){
+        if($mainIndex == 0){ //첫번째 사진/pageOn 이면 마지막 사진으로 변경
             $mainSelect.eq($mainLast).addClass('mainSelect');
-            console.log('hellllo');
-        }else{
+            $main.find('ul.mainPage li').removeClass('pageOn').last().addClass('pageOn');
+        }else{ //첫번째가 아닐 경우 이전 사진과 pageOn
             $mainSelect.eq($mainIndex).prev().addClass('mainSelect');
+            $main.find('ul.mainPage li.pageOn').removeClass('pageOn').prev().addClass('pageOn');
         }
     })
-    $mainRight.click(function(){
+    $mainRight.click(function(){ //오른쪽 화살표를 클릭했을때
         let $mainIndex = $main.find('ul.mainGallery li.mainSelect').index();
         console.log($mainIndex + '!!!' +$mainLast);
         $mainSelect.removeClass('mainSelect');
-        if($mainIndex == 7){
+        if($mainIndex == 7){ //마지막 사진과 pageOn 이면 첫번째로 변경
             $mainSelect.eq($mainFirst).addClass('mainSelect');
-            console.log('hellllo');
-        }else{
+            $main.find('ul.mainPage li').removeClass('pageOn').first().addClass('pageOn');
+        }else{ //마지막 아닐 경우 다음 사진과 pageOn
             $mainSelect.eq($mainIndex).next().addClass('mainSelect');
+            $main.find('ul.mainPage li.pageOn').removeClass('pageOn').next().addClass('pageOn');
         }
     })
-
     // Main click pageOn - 선택한 page가 현재 page 랑 다르면 실행
     $main.find('ul.mainPage li').click(function(){
         let $pageOn = $main.find('.pageOn').index(); //li.pageOn index값
         let $pageNew = $(this).index(); //클릭한 li index값
-
         function $mainGalSelect($pageNew){ //main pageOn 클릭 메서드 함수 
             $main.find('ul.mainGallery li').stop().fadeOut(500,function(){
                 $(this).removeClass('mainSelect');
@@ -123,15 +95,16 @@ $(function(){
                 $(this).addClass('mainSelect');
             });
         }
+        // 실행할 코드
         if($pageNew != $pageOn){
             $main.find('ul.mainPage li.pageOn').removeClass('pageOn'); //
             $(this).addClass('pageOn');
             $mainGalSelect($pageNew); 
         }
     })
-    //End of Main
+    //End of Main -----
 
-    // Content 01 변수선언
+    // cnt01 - About Line Friends JQuery
     let $thumbnail = $body.find('.cnt01 .media a'),
         $popup = $body.find('.cnt01Popup'),
         $close = $body.find('.cnt01Popup .close');
@@ -146,4 +119,19 @@ $(function(){
             $popup.find('section').hide(500);
         });
     })
+    // End of cnt01 -----
+
+    // cnt 03 Gallery
+    // let $cnt03Gallery = $body.find('.cnt03'),
+    //     $cnt03galSelect = $cnt03Gallery.find('.galSelect'),
+    //     $galbutton = $cnt03Gallery.find('ul.galList li button');
+    // $galbutton.click(function(){
+    //     let $galListOld = $galbutton.parent().find('.galOn').index();
+    //         $galListNew = $(this).index();
+    //     console.log($galListOld +'CNT03'+$galListNew);
+    //     $cnt03galSelect.css("background-image","url('img/gallery_img"+$+".jpg')");
+    //     $(this).addClass('galOn');
+    //     $(this).siblings().removeClass('galOn');
+    // })
+
 })
