@@ -134,4 +134,16 @@ $(function(){
     //     $(this).siblings().removeClass('galOn');
     // })
 
+    // cnt 04 MEDIA
+    let $cnt04pgNum = $body.find('.cnt04 ul.pageNum li');
+    $cnt04pgNum.click(function(){ //클릭시 현재 페이지 표시, 나머지 번호는 흐려짐
+        $(this).addClass('select').siblings().removeClass('select');
+    })
+    //END OF CNT 04 -----
+    // cnt 05 NOTICE
+    let $cnt05pgNum = $body.find('.cnt05 ul.pageNum li');
+    $cnt05pgNum.click(function(){ //클릭시 현재 페이지 표시, 나머지 번호는 흐려짐
+        $(this).addClass('select').siblings().removeClass('select');
+    })
+    // END OF CNT 05 -----
 })

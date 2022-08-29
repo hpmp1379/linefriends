@@ -93,10 +93,10 @@ ul.pageNum::after{
 ul.pageNum li {
   font-size: 16px;
   margin: 0 10px;
+  color: #ccc;
+	cursor: pointer;
 }
-ul.pageNum li a.select{
+ul.pageNum li.select{
 	color: inherit;
-}
-ul.pageNum li a {
-	color: #999;
+	font-weight: bold;
 }
