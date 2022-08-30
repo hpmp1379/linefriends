@@ -112,6 +112,7 @@ main ul.mainGallery li{
   background-size: cover;
   background-position: center;
   display: none;
+  font-size: 0;
 }
 main ul.mainGallery li:nth-of-type(1){
   background-image:url("../img/main01.jpg");
@@ -734,7 +735,7 @@ main ul.mainPage li {
 .cnt01Popup section .btn{
   position: absolute;
   top: 50px;
-  right: 50px;
+  right: 200px;
 }
 .cnt01Popup section .btn button.close{
   background-color: transparent;
@@ -744,10 +745,10 @@ main ul.mainPage li {
   line-height: 80px;
 }
 .cnt01Popup section .playVideo{
-  background-image: url('../img/sddefault.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 675px;
-  width: 100%;
+  /*! background-image: url('../img/sddefault.webp'); */
+  /*! background-repeat: no-repeat; */
+  /*! background-size: cover; */
+  /*! background-position: center; */
+  /*! height: 603px; */
+  /*! width: 1077px; */
 }

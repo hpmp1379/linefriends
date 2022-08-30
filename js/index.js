@@ -57,13 +57,14 @@ $(function(){
     $mainGallery = $main.find('ul.mainGallery'),
     $mainSelect = $mainGallery.find('li');
     // Main click left/Right arrow - 클릭시 왼쪽/오른쪽 이미지 보여주기
-    let $mainLast = $main.find('ul.mainGallery li:last-child').index();
-        $mainFirst = $main.find('ul.mainGallery li:first-child').index();
+    let $mainLast = 7 /*$main.find('ul.mainGallery li:last-child').index() 무조건 7*/;
+        $mainFirst = 0 /* $main.find('ul.mainGallery li:first-child').index() 무조건 0*/;
     $mainLeft.click(function(){ //왼쪽 화살표를 클릭했을때
-        let $mainIndex = $main.find('ul.mainGallery li.mainSelect').index();
-        console.log($mainIndex + '!!!' +$mainLast);
+        let $mainIndex = $main.find('ul.mainGallery li.mainSelect').index() /*현재 .mainSelect 위치 0~7 */;
+        console.log($mainIndex);
         $mainSelect.removeClass('mainSelect');
         if($mainIndex == 0){ //첫번째 사진/pageOn 이면 마지막 사진으로 변경
+            $(this).removeClass('mainSelect');
             $mainSelect.eq($mainLast).addClass('mainSelect');
             $main.find('ul.mainPage li').removeClass('pageOn').last().addClass('pageOn');
         }else{ //첫번째가 아닐 경우 이전 사진과 pageOn
@@ -71,11 +72,13 @@ $(function(){
             $main.find('ul.mainPage li.pageOn').removeClass('pageOn').prev().addClass('pageOn');
         }
     })
+
     $mainRight.click(function(){ //오른쪽 화살표를 클릭했을때
         let $mainIndex = $main.find('ul.mainGallery li.mainSelect').index();
-        console.log($mainIndex + '!!!' +$mainLast);
+        console.log($mainIndex + '!!!' +$mainFirst);
         $mainSelect.removeClass('mainSelect');
         if($mainIndex == 7){ //마지막 사진과 pageOn 이면 첫번째로 변경
+            $(this).removeClass('mainSelect');
             $mainSelect.eq($mainFirst).addClass('mainSelect');
             $main.find('ul.mainPage li').removeClass('pageOn').first().addClass('pageOn');
         }else{ //마지막 아닐 경우 다음 사진과 pageOn
@@ -83,7 +86,7 @@ $(function(){
             $main.find('ul.mainPage li.pageOn').removeClass('pageOn').next().addClass('pageOn');
         }
     })
-    // Main click pageOn - 선택한 page가 현재 page 랑 다르면 실행
+    // ***Main click pageOn - 선택한 page가 현재 page 랑 다르면 실행
     $main.find('ul.mainPage li').click(function(){
         let $pageOn = $main.find('.pageOn').index(); //li.pageOn index값
         let $pageNew = $(this).index(); //클릭한 li index값
@@ -95,11 +98,13 @@ $(function(){
                 $(this).addClass('mainSelect');
             });
         }
-        // 실행할 코드
+        // 코드 실행
         if($pageNew != $pageOn){
+            console.log($pageNew+'?!!?'+$pageOn);
             $main.find('ul.mainPage li.pageOn').removeClass('pageOn'); //
             $(this).addClass('pageOn');
             $mainGalSelect($pageNew); 
+            
         }
     })
     //End of Main -----
