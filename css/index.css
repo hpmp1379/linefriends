@@ -100,7 +100,8 @@ main ul.mainGallery::before{
   left: 0;
 }
 main ul.mainGallery .mainSelect{
-  display: block;
+/*   display: block; */
+  background-image: url('../img/main00.jpg');
 }
 main ul.mainGallery li{
   width: 100%;
@@ -111,32 +112,31 @@ main ul.mainGallery li{
   z-index: -1;
   background-size: cover;
   background-position: center;
-  display: none;
   font-size: 0;
 }
-main ul.mainGallery li:nth-of-type(1){
+main ul.mainGallery .m0{
   background-image:url("../img/main01.jpg");
 }
-main ul.mainGallery li:nth-of-type(2){
-  background-image:url("../img/main02.jpg");
+main ul.mainGallery .m1{
+/*   background-image:url("../img/main02.jpg"); */
 }
-main ul.mainGallery li:nth-of-type(3){
-  background-image:url("../img/main03.jpg");
+main ul.mainGallery .m2{
+/*   background-image:url("../img/main03.jpg"); */
 }
-main ul.mainGallery li:nth-of-type(4){
-  background-image:url("../img/main04.jpg");
+main ul.mainGallery .m3{
+/*   background-image:url("../img/main04.jpg"); */
 }
-main ul.mainGallery li:nth-of-type(5){
-  background-image:url("../img/main05.jpg");
+main ul.mainGallery .m4{
+/*   background-image:url("../img/main05.jpg"); */
 }
-main ul.mainGallery li:nth-of-type(6){
-  background-image:url("../img/main06.jpg");
+main ul.mainGallery .m5{
+/*   background-image:url("../img/main06.jpg"); */
 }
-main ul.mainGallery li:nth-of-type(7){
-  background-image:url("../img/main07.jpg");
+main ul.mainGallery .m6{
+/*   background-image:url("../img/main07.jpg"); */
 }
-main ul.mainGallery li:nth-of-type(8){
-  background-image:url("../img/main08.jpg");
+main ul.mainGallery .m7{
+/*   background-image:url("../img/main08.jpg"); */
 }
 main .texts {
   text-align: center;
