@@ -114,30 +114,6 @@ main ul.mainGallery li{
   background-position: center;
   font-size: 0;
 }
-main ul.mainGallery .m0{
-  background-image:url("../img/main01.jpg");
-}
-main ul.mainGallery .m1{
-/*   background-image:url("../img/main02.jpg"); */
-}
-main ul.mainGallery .m2{
-/*   background-image:url("../img/main03.jpg"); */
-}
-main ul.mainGallery .m3{
-/*   background-image:url("../img/main04.jpg"); */
-}
-main ul.mainGallery .m4{
-/*   background-image:url("../img/main05.jpg"); */
-}
-main ul.mainGallery .m5{
-/*   background-image:url("../img/main06.jpg"); */
-}
-main ul.mainGallery .m6{
-/*   background-image:url("../img/main07.jpg"); */
-}
-main ul.mainGallery .m7{
-/*   background-image:url("../img/main08.jpg"); */
-}
 main .texts {
   text-align: center;
   position: absolute;
