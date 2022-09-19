@@ -100,7 +100,6 @@ $(function(){
     })
     
     // ***main 현재 갤러리 페이지
-    // **0831수정
     // add/remove class대신 css배경만 바꾸기
     $main.find('ul.mainPage li').click(function(){
         let $pageOn = $main.find('.pageOn').index(); //현재 페이지 index값
@@ -118,22 +117,29 @@ $(function(){
     })
     //End of Main -----
 
-    // cnt01 - About Line Friends JQuery
-    let $thumbnail = $body.find('.cnt01 .media a'),
+    // (완료) cnt01 - About Line Friends JQuery 
+    let $cnt01_video = $body.find('.cnt01 .media a'),
         $popup = $body.find('.cnt01Popup'),
         $close = $body.find('.cnt01Popup .close');
-    // Content 01 modal 창
-    $thumbnail.click(function(){
+    // Content 01 modal 창 열기 -callback
+    $cnt01_video.click(function(){
+        openModal();
+    })
+    $close, $popup.click(function(){
+        closeModal();
+    })
+    //callback function to open/close modal upon clicking certain area
+    function openModal(){
         $popup.fadeIn(300, function(){
             $popup.find('section').fadeIn(200);
         });
-    })
-    $close.click(function(){
+    }
+    function closeModal(){
         $popup.fadeOut(300, function(){
             $popup.find('section').hide(500);
         });
-    })
-    // End of cnt01 -----
+    }
+    // End of cnt01 (완료)-----
 
     // cnt 03 Gallery
     // let $cnt03Gallery = $body.find('.cnt03'),
